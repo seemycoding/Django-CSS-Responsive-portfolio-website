@@ -1,0 +1,26 @@
+{% extends 'personalP/base.htm' %} {% block content %}
+<div class="showcase-work-section" id="showcase-work-section">
+  <div class="showcase-img-text"><h3>IN DEVELOPMENT</h3></div>
+
+  <div class="showcase-img-dev">
+    {% load static %}
+    <div class="showcase-img-first"><h4 class="IP">IN DEVELOPMENT</h4></div>
+    <div class="showcase-img-second"><h4 class="IP">IN DEVELOPMENT</h4></div>
+    <div class="showcase-img-third"><h4 class="IP">IN DEVELOPMENT</h4></div>
+  </div>
+
+  <div class="showcase-img-text"><h3>PUBLISHED WORK</h3></div>
+
+  <div class="showcase-img-dev">
+    <div class="showcase-img-first">
+      <img src="{% static 'personalP/untitled.png' %}" alt="" class="work" />
+    </div>
+    <div class="showcase-img-second">
+      <img src="{% static 'personalP/linkapp.png' %}" alt="" class="work" />
+    </div>
+    <div class="showcase-img-third">
+      <img src="{% static 'personalP/firin.png' %}" alt="" class="work" />
+    </div>
+  </div>
+</div>
+{% endblock%}

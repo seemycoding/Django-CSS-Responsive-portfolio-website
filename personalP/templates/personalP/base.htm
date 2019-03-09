@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'personalP/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="{% static 'personalP/app.js' %}"></script>
+
+    {% if 'Work' in work %}
+    <title>Himanshu-Work</title>
+    {% endif %} {% if 'About' in about %}
+    <title>About Himanshu</title>
+    {% endif %} {% if 'Resume' in resume %}
+    <title>Himanshu Resume</title>
+    {% endif %}
+    <title>Himanshu</title>
+  </head>
+  <body>
+    <header>
+      <div class="top-head">
+      <div class="main-header">
+        <h1>h: / ><span> Himanshu Kumar</span></h1>
+      </div>
+      <div class="main-nav">
+        <ul>
+          <li><a href="{% url 'home' %}">HOME</a></li>
+          <li><a href="{% url 'work' %}">WORK</a></li>
+          <li><a href="{% url 'about' %}">ABOUT</a></li>
+          <li><a href="{% url 'resume' %}">RESUME & CONTACT</a></li>
+        </ul>
+      </div>
+    
+      <div class="menu-open">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"
+          >&#9776;
+        </span>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="{% url 'home' %}">HOME</a> <a href="{% url 'work' %}">WORK</a>
+        <a href="{% url 'about' %}">ABOUT</a>
+        <a href="{% url 'resume' %}">RESUME & CONTACT</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+      </div>
+    </div>
+    </header>
+
+    <section>{% block content %} {% endblock %}</section>
+  </body>
+</html>
